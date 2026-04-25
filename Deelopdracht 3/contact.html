@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactpagina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            color: #555;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .contact-info {
+            margin-top: 30px;
+            text-align: center;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Neem contact op</h2>
+    <form action="verwerken.php" method="POST">
+        <label for="name">Naam:</label>
+        <input type="text" id="name" name="name" placeholder="Uw naam" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Uw e-mail" required>
+
+        <label for="subject">Onderwerp:</label>
+        <input type="text" id="subject" name="subject" placeholder="Onderwerp" required>
+
+        <label for="message">Bericht:</label>
+        <textarea id="message" name="message" placeholder="Typ uw bericht hier..." required></textarea>
+
+        <button type="submit">Verstuur</button>
+    </form>
+
+    <div class="contact-info">
+        <p>Email: anzor2508@gmail.com.com</p>
+        <p>Telefoon: +32 484 03 48 32</p>
+    </div>
+</div>
+
+</body>
+</html>
