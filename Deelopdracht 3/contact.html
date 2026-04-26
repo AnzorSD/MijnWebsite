@@ -1,91 +1,62 @@
 <!DOCTYPE html>
-<html lang="nl">
-<head>
+<html lang="nl-BE">
+<figure>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactpagina</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        label {
-            display: block;
-            margin-top: 15px;
-            color: #555;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        button {
-            margin-top: 20px;
-            padding: 12px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        .contact-info {
-            margin-top: 30px;
-            text-align: center;
-            color: #777;
-        }
-    </style>
+    <title>Portfolio Anzor Donkurov</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!--LEAFLET-->
+
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  
+  <link rel="stylesheet" href="css/map.css">
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    
 </head>
 <body>
 
-<div class="container">
-    <h2>Neem contact op</h2>
-    <form action="verwerken.php" method="POST">
-        <label for="name">Naam:</label>
-        <input type="text" id="name" name="name" placeholder="Uw naam" required>
+<link rel="stylesheet" href="css/map.css">
+<!--Navigatie-->
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="project.html">Project</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="Uw e-mail" required>
+<!--Inhoud-->
+<main>
+    <article class="project-card">
+        <section class="project-section">
+            <h1>Neem gerust contact op</h1>
+            <form action="mailto:anzor2508@gmail.com" method="post" enctype="text/plain0" class="form-contact">
 
-        <label for="subject">Onderwerp:</label>
-        <input type="text" id="subject" name="subject" placeholder="Onderwerp" required>
+                <label for="naam">Naam:</label>
+                <input type="text" id="naam" name="naam" class="textarea-contact">
 
-        <label for="message">Bericht:</label>
-        <textarea id="message" name="message" placeholder="Typ uw bericht hier..." required></textarea>
+                <label for="email">E-mailadres:</label>
+                <input type="email" id="email" name="email" class="textarea-contact">
 
-        <button type="submit">Verstuur</button>
-    </form>
+                <label for="bericht">Bericht:</label>
+                <textarea id="bericht" name="bericht" rows="5" class="textarea-contact"></textarea>
 
-    <div class="contact-info">
-        <p>Email: anzor2508@gmail.com.com</p>
-        <p>Telefoon: +32 484 03 48 32</p>
-    </div>
-</div>
-
+                <button type="submit" class="button-contact">
+                    Verstuur
+                </button>
+            </form>
+            <section id="map" class="row">
+                <figure id="HomeMap" class="col-12 mb-3"></figure>
+            </section>
+        </section>
+    </article>
+</main>
 </body>
 </html>
